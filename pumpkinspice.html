@@ -3,6 +3,9 @@
 
 <head>
   <link rel="stylesheet" href="styles/main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/dropdown.js"></script>
 </head>
 
 <body>
@@ -15,7 +18,7 @@
     <ul class="nav">
       <li class="navlink"><a href="#">About</a></li>
       <li class="navlink"><a href="menu.html">Menu</a></li>
-      <li class="navlink"><a href="#">Cart</a></li>
+      <li class="navlink"><a href="cart.html">Cart</a></li>
     </ul>
   </header>
 
@@ -33,24 +36,28 @@
 
     <div class="food-about">
       <div class="food-options">
-        <img src="img/product-page/pumpkinspice.png" alt="Pumpkin Spice Cinnamon Roll" width="100%">
+        <img class="food-img" src="img/product-page/pumpkinspice.png" alt="Pumpkin Spice Cinnamon Roll">
 
         <form class="food-select" action="">
-          <label for="packsize">Amount: </label>
-          <select name="packsize" id="amt">
-            <option value="1">1</option>
-            <option value="3">3</option>
-            <option value="6">6</option>
-            <option value="12">12</option>
-          </select>
+          <div class="select-dropdown">
+            <label for="packsize">Amount: </label>
+            <select name="packsize" id="amt">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+            </select>
+          </div>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <label for="packsize">Glazing: </label>
-          <select name="packsize" id="glz">
-            <option value="1">None</option>
-            <option value="3">Sugar-milk</option>
-            <option value="6">Vanilla-milk</option>
-            <option value="12">Double Chocolate</option>
-          </select>
+          <div class="select-dropdown">
+            <label for="glazeselect">Glazing: </label>
+            <select name="glazeselect" id="glz" required>
+              <option value="hello">None</option>
+              <option value="1">Sugar-milk</option>
+              <option value="2">Vanilla-milk</option>
+              <option value="3" selected="selected">Double Chocolate</option>
+            </select>
+          </div>
           <br><br>
         </form>
 
