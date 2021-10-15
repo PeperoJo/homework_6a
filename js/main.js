@@ -24,6 +24,8 @@ function updateCartLabel(){
   // console.log("This much in cart: "+cartSize);
   if (cartSize > 0){
     $('#cartNavItem').text("Cart ("+cartSize+")");
+  } else {
+    $('#cartNavItem').text("Cart");
   }
 }
 updateCartLabel();
