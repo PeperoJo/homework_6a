@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="styles/main.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/dropdown.js"></script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <ul class="nav">
       <li class="navlink"><a href="#">About</a></li>
       <li class="navlink"><a href="menu.html">Menu</a></li>
-      <li class="navlink"><a href="cart.html">Cart</a></li>
+      <li class="navlink"><a href="cart.html" id="cartNavItem">Cart</a></li>
     </ul>
   </header>
 
@@ -42,7 +42,7 @@
           <div class="select-dropdown">
             <label for="packsize">Amount: </label>
             <select name="packsize" id="amt">
-              <option value="1">1</option>
+              <option value="1" selected>1</option>
               <option value="3">3</option>
               <option value="6">6</option>
               <option value="12">12</option>
@@ -52,20 +52,19 @@
           <div class="select-dropdown">
             <label for="glazeselect">Glazing: </label>
             <select name="glazeselect" id="glz" required>
-              <option value="hello">None</option>
-              <option value="1">Sugar-milk</option>
-              <option value="2">Vanilla-milk</option>
-              <option value="3" selected="selected">Double Chocolate</option>
+              <option value="" selected>None</option>
+              <option value="sugarmilk">Sugar-milk</option>
+              <option value="vanilla">Vanilla-milk</option>
+              <option value="chocolate">Double Chocolate</option>
             </select>
           </div>
           <br><br>
         </form>
 
-        <div class="price">
-          $3.99
-        </div>
+        <div class="price">$3.99</div>
 
-        <button class="cart-btn" onclick="window.location.href='';">
+        <!-- <button class="cart-btn" onclick="window.location.href='';"> -->
+        <button class="cart-btn">
           Add to Cart
         </button>
 
