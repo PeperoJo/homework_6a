@@ -75,8 +75,6 @@ $('.cart-btn').click(function(){
   localStorage.setItem("cartArray", JSON.stringify(cartArray));
 
   updateCartLabel();
-
-
   moveBanner();
 });
 
